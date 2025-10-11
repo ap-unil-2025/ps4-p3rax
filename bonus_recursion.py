@@ -28,14 +28,9 @@ def factorial(n):
         1
     """
     # TODO: Implement this function recursively
-    # Base case: if n is 0 or 1, return 1
-    # Recursive case: return n * factorial(n-1)
-
-    # Hint:
-    # if n <= 1:
-    #     return 1
-    # return n * factorial(n - 1)
-    pass
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
 
 
 def countdown(n):
@@ -55,9 +50,11 @@ def countdown(n):
         Blastoff!
     """
     # TODO: Implement this function recursively
-    # Base case: if n is 0, print "Blastoff!" and return
-    # Recursive case: print n, then call countdown(n-1)
-    pass
+    if n == 0:
+        print("Blastoff!")
+        return
+    print(n)
+    countdown(n - 1)
 
 
 def sum_list(numbers):
@@ -75,14 +72,9 @@ def sum_list(numbers):
         15
     """
     # TODO: Implement this function recursively
-    # Base case: if list is empty, return 0
-    # Recursive case: return first element + sum_list(rest of list)
-
-    # Hint:
-    # if not numbers:  # empty list
-    #     return 0
-    # return numbers[0] + sum_list(numbers[1:])
-    pass
+    if not numbers:
+        return 0
+    return numbers[0] + sum_list(numbers[1:])
 
 
 def fibonacci(n):
@@ -106,9 +98,11 @@ def fibonacci(n):
         8
     """
     # TODO: Implement this function recursively
-    # Base cases: if n is 0, return 0; if n is 1, return 1
-    # Recursive case: return fibonacci(n-1) + fibonacci(n-2)
-    pass
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 def power(base, exponent):
@@ -129,9 +123,9 @@ def power(base, exponent):
         27
     """
     # TODO: Implement this function recursively
-    # Base case: if exponent is 0, return 1
-    # Recursive case: return base * power(base, exponent-1)
-    pass
+    if exponent == 0:
+        return 1
+    return base * power(base, exponent - 1)
 
 
 def reverse_string(text):
@@ -149,14 +143,9 @@ def reverse_string(text):
         "olleh"
     """
     # TODO: Implement this function recursively
-    # Base case: if text is empty or 1 character, return it
-    # Recursive case: return last character + reverse_string(rest of string)
-
-    # Hint:
-    # if len(text) <= 1:
-    #     return text
-    # return text[-1] + reverse_string(text[:-1])
-    pass
+    if len(text) <= 1:
+        return text
+    return text[-1] + reverse_string(text[:-1])
 
 
 def count_down_list(n):
@@ -174,9 +163,9 @@ def count_down_list(n):
         [5, 4, 3, 2, 1]
     """
     # TODO: Implement this function recursively
-    # Base case: if n is 0, return empty list
-    # Recursive case: return [n] + count_down_list(n-1)
-    pass
+    if n == 0:
+        return []
+    return [n] + count_down_list(n - 1)
 
 
 def flatten_list(nested_list):
@@ -194,20 +183,13 @@ def flatten_list(nested_list):
         [1, 2, 3, 4, 5, 6, 7]
     """
     # TODO: Implement this function recursively
-    # Base case: if empty list, return []
-    # For each item:
-    #   - If it's a list, recursively flatten it
-    #   - If not, keep it as is
-
-    # Hint:
-    # result = []
-    # for item in nested_list:
-    #     if isinstance(item, list):
-    #         result.extend(flatten_list(item))
-    #     else:
-    #         result.append(item)
-    # return result
-    pass
+    if not nested_list:
+        return []
+    first, *rest = nested_list
+    if isinstance(first, list):
+        return flatten_list(first) + flatten_list(rest)
+    else:
+        return [first] + flatten_list(rest)
 
 
 # Test cases
