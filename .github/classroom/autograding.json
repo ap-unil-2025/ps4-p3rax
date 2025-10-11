@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Run test suite",
+      "setup": "pip install -r requirements.txt || true",
+      "run": "python test_assignment.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 120
+    }
+  ]
+}
