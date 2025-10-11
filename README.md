@@ -57,14 +57,14 @@ This assignment focuses on working with Python data structures (lists and dictio
    ```
 
 ## Submission Checklist
-- [ ] Problem 1: All list functions work correctly
-- [ ] Problem 2: Dictionary operations handle edge cases
-- [ ] Problem 3: Contact manager has all features
-- [ ] Problem 4: JSON saving/loading works
-- [ ] (Optional) Bonus recursion problems completed
-- [ ] All code is tested and working
-- [ ] Code uses clear variable names and is well-commented
-- [ ] Repository pushed to GitHub
+- [x] Problem 1: All list functions work correctly
+- [x] Problem 2: Dictionary operations handle edge cases
+- [x] Problem 3: Contact manager has all features
+- [x] Problem 4: JSON saving/loading works
+- [x] (Optional) Bonus recursion problems completed
+- [x] All code is tested and working
+- [ ] Code uses clear variable names and is well-commented *(will improve in future assignments)*
+- [x] Repository pushed to GitHub
 
 ## Tips for Success
 - **Start early** - Give yourself time to debug
